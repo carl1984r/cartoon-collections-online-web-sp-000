@@ -21,6 +21,6 @@ def find_the_cheese(array)
     return array[i] if yield(array[i])
     i = i + 1
   end
-find_the_cheese(array) {|x| x == "cheddar" || x == "gouda" || x == "camembert"}
+array.each {|x| x == "cheddar" || x == "gouda" || x == "camembert"}
   cheese_types = ["cheddar", "gouda", "camembert"]
 end
