@@ -16,6 +16,11 @@ arr.any? {|x| x > 4}
 end
 
 def find_the_cheese(array)
-  # the array below is here to help
+  i = 0
+  while i < array.length
+    return array[i] if yield(array[i])
+    i = i + 1
+  end
+find_the_cheese(array) {|x| x == "cheddar"}
   cheese_types = ["cheddar", "gouda", "camembert"]
 end
