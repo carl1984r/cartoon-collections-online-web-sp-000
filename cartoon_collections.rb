@@ -16,5 +16,12 @@ arr.any? {|x| x > 4}
 end
 
 def find_the_cheese(array)
+  i = 0
+  while i < array.length
+    if yield(array[i])
+      return array[i]
+    end
+    i += 1
+  end
   array.any? {|x| x == "cheddar" || x == "gouda" || x == "camembert"}
 end
