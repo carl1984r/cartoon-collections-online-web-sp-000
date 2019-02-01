@@ -16,11 +16,5 @@ arr.any? {|x| x > 4}
 end
 
 def find_the_cheese(array)
-  i = 0
-  while i < array.length
-    return array[i] if yield(array[i])
-    i = i + 1
-  end
-array.each {|x| x == "cheddar" || x == "gouda" || x == "camembert"}
-  cheese_types = ["cheddar", "gouda", "camembert"]
+  array.any? {|x| x == "cheddar" || x == "gouda" || x == "camembert"}
 end
