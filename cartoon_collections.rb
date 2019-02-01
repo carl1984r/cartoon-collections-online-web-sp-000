@@ -24,4 +24,5 @@ def find_the_cheese(array)
     i += 1
   end
 cheese = ["cheddar", "gouda", "camembert"]
+find_the_cheese(cheese)
 end
