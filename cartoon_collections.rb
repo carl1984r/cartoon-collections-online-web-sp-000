@@ -16,5 +16,5 @@ arr.any? {|x| x > 4}
 end
 
 def find_the_cheese(array)
-  array.find {|x| x == "cheddar" || x == "gouda"}
+  array.find {|x| x == "cheddar" || x == "gouda" || x == "camambert"}
 end
